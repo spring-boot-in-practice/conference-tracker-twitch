@@ -36,7 +36,7 @@ public class ConferenceController {
     @GetMapping("/index")
     public String index(Model model) {
         List<Conference> conferenceList = (List<Conference>) conferenceService.getConferences();
-        model.addAttribute("conferences", conferenceList.isEmpty() ? Collections.EMPTY_LIST : conferenceList);
+        model.addAttribute("conferences", conferenceList);
         return "index";
     }
 
